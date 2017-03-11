@@ -24,4 +24,16 @@ class LuckyController extends Controller
             'number' => $number,
         ));
     }
+    
+    /**
+     * @Route("/lucky/testerror")
+     */
+    public function testerrorAction()
+    {
+        // retrieve the object from database
+        $product = false;
+        if (!$product) {
+            throw $this->createNotFoundException('The product does not exist');
+        }
+    }
 }

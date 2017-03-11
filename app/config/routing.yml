@@ -1,3 +1,7 @@
+film:
+    resource: "@FilmBundle/Resources/config/routing.yml"
+    prefix:   /film
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
