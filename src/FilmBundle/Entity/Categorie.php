@@ -23,9 +23,42 @@ class Categorie {
     private $id;
     
     /**
-     * @ORM\Column(type="string",length="255")
+     * @ORM\Column(type="string",length=255)
      * @Assert\NotBlank()
-     * @Assert\MinLength(3)
+     * @Assert\Length(min = 3)
      */    
     private $nom;
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     * @return Categorie
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string 
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
 }

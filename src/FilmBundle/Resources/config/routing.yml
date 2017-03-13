@@ -1,3 +1,20 @@
 film_homepage:
     path:     /
     defaults: { _controller: FilmBundle:Default:index }
+
+list_categorie:
+    pattern: /list/
+    defaults: { _controller: FilmBundle:Default:list }
+  
+acteur_lister:
+  pattern: /acteur/
+  defaults: { _controller: FilmBundle:Acteur:index }
+acteur_ajouter:
+    pattern: /acteur/ajouter
+    defaults: { _controller: FilmBundle:Acteur:ajouter }
+acteur_modifier:
+    pattern: /acteur/modifier/{id}
+    defaults: { _controller: FilmBundle:Acteur:modifier }
+acteur_supprimer:
+    pattern: /acteur/supprimer/{id}
+    defaults: { _controller: FilmBundle:Acteur:supprimer }
